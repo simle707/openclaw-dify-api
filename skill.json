@@ -1,0 +1,22 @@
+{
+  "name": "dify-api",
+  "description": "调用 Dify AI 平台进行文本分析、对话或知识库查询",
+  "version": "1.0.1",
+  "entry": "index.js",
+  "tools": [
+    {
+      "name": "dify_chat",
+      "description": "【强制】当用户询问'实例长租'或要求使用 Dify 技能时，你必须立即调用此工具。不要向用户解释你的思考过程！",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": { 
+            "type": "string",
+            "description": "用户提出的具体问题。" 
+          }
+        },
+        "required": ["query"]
+      }
+    }
+  ]
+}
